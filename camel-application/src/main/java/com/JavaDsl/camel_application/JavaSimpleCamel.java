@@ -12,7 +12,7 @@ public class JavaSimpleCamel {
 			
 			CamelContext context=new DefaultCamelContext();
 			
-			context.addComponent("activemq", ActiveMQComponent.activeMQComponent("vm://localhost?broker.persistent=false"));
+			context.addComponent("activemq", ActiveMQComponent.activeMQComponent("vm://localhost?broker.persistent=false")); // this is used to store the text in memory and not in file.
 			context.addRoutes(new RouteBuilder() {
 				
 				@Override
